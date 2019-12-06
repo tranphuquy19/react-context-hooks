@@ -9,6 +9,13 @@ const ComponentE = () => {
     const {state, dispatch} = useContext(ObjectContext);
     let {number, str} = state;
 
+    let onChange = (e) => {
+        dispatch({
+            type: 'STR',
+            payload: e.target.value
+        })
+    }
+
     return (
         <div>
             <p>
@@ -17,6 +24,8 @@ const ComponentE = () => {
                     <button onClick={() => dispatch({type: 'TANG'})}>Tang</button>
                     <button onClick={() => dispatch({type: 'GIAM'})}>GIAM</button>
                 </span>
+                <br/>
+                <input type="text" onChange={(e) => onChange(e)}/>
             </p>
         </div>
     );

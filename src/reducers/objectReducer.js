@@ -13,6 +13,9 @@ const objectReducer = (state , action) => {
         case 'GIAM':
             obj.number--;
             return obj;
+        case 'STR':
+            obj.str = action.payload;
+            return obj;
         default:
             return state;
     }
