@@ -5,6 +5,7 @@ import Store from "./store";
 import ComponentC from "./components/componentC";
 import ComponentD from "./components/componentD";
 import ComponentE from "./components/componentE";
+import ComponentF from "./components/componentF";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <ComponentC/>
           <ComponentD/>
           <ComponentE/>
+          <ComponentF/>
       </Store>
   );
 }

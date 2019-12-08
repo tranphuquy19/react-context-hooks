@@ -14,6 +14,7 @@ const Store = ({children}) => {
     const [str, setStr] = useState('ahihi');
     const [state, dispatch] = useReducer(objectReducer, objectInit);
 
+
     return (
         <NumberContext.Provider value={[number, setNumber]}>
             <StringContext.Provider value={[str, setStr]}>
