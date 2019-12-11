@@ -6,11 +6,11 @@ import React, {useContext, useReducer} from 'react';
 import {ObjectContext} from "../contexts/objectContext";
 
 const ComponentE = () => {
-    const {state, dispatch} = useContext(ObjectContext);
-    let {number, str} = state;
+    const {userState, userDispatch} = useContext(ObjectContext);
+    let {number, str} = userState;
 
     let onChange = (e) => {
-        dispatch({
+        userDispatch({
             type: 'STR',
             payload: e.target.value
         })
@@ -21,8 +21,8 @@ const ComponentE = () => {
             <p>
                 <b>{number} | {str}</b>
                 <span>
-                    <button onClick={() => dispatch({type: 'TANG'})}>Tang</button>
-                    <button onClick={() => dispatch({type: 'GIAM'})}>GIAM</button>
+                    <button onClick={() => userDispatch({type: 'TANG'})}>Tang</button>
+                    <button onClick={() => userDispatch({type: 'GIAM'})}>GIAM</button>
                 </span>
                 <br/>
                 <input type="text" onChange={(e) => onChange(e)}/>

@@ -6,6 +6,7 @@ import ComponentC from "./components/componentC";
 import ComponentD from "./components/componentD";
 import ComponentE from "./components/componentE";
 import ComponentF from "./components/componentF";
+import ComponentG from "./components/componentG";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <ComponentD/>
           <ComponentE/>
           <ComponentF/>
+          <ComponentG/>
+          <ComponentG/>
       </Store>
   );
 }
